@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint ./src --ext .js,.jsx,.vue,.ts,.tsx --fix",
-    "prepare": "husky install"
+    "prepare": "husky install &&npx husky add .husky/pre-commit 'npx lint-staged'"
   },
   "dependencies": {
     "vue": "^3.2.25"
