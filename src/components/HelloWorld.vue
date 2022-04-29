@@ -28,7 +28,7 @@ const count = ref(0);
   <p>
     <a
       href="https://vitejs.dev/guide/features.html"
-      target="_blank"
+      target="_bladddnk"
     >
       Vite Docs
     </a>
