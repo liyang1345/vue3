@@ -9,7 +9,7 @@ import HelloWorld from './components/HelloWorld.vue';
     alt="Vue logo"
     src="./assets/logo.png"
   >
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HelloWorld msg="Heccccllo Vue 3 + TypeScript + Vite" />
 </template>
 
 <style>
