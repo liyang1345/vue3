@@ -23,7 +23,7 @@ const count = ref(0);
     >Volar</a>
   </p>
 
-  <p>See <code>README.md</code> for more information.</p>
+  <p>See <code>REAdDME.md</code> for more information.</p>
 
   <p>
     <a
