@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    'vue/setup-compiler-macros': true,
   },
   extends: [
     // 'plugin:vue/essential',
@@ -16,6 +17,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 11,
     parser: '@typescript-eslint/parser',
+    ecmaFeatures: {
+      jsx: true,
+    },
     sourceType: 'module',
   },
   plugins: [
@@ -23,6 +27,24 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'import/extensions': ['error', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: [
+          '.js',
+          '.jsx',
+          '.ts',
+          '.tsx',
+        ],
+      },
+    },
   },
 };

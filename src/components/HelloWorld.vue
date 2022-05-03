@@ -1,15 +1,34 @@
-<script setup lang="ts">
-import { ref } from 'vue';
+<script setup lang="tsx">
+import { onMounted, ref } from 'vue';
 
-// eslint-disable-next-line no-undef
-defineProps<{ msg: string }>();
+// eslint-disable-next-line import/no-unresolved
+import Foo from './foo';
 
+const props = defineProps({
+  msg: {
+    type: String,
+  },
+});
 const count = ref(0);
+const abc = <h1>test worc</h1>;
+const foo = ref<{ a:number, b:string } | null>(null);
+// 指定相关类型
+const title = ref<HTMLHeadElement | null>(null);
+const emit = defineEmits(['testEmit']);
+onMounted(() => {
+  console.log(title.value);
+  console.log(foo.value);
+});
+foo.value = {
+  a: 1,
+  b: '223',
+};
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
+  <h1>{{ props.msg }}</h1>
+  <abc />
+  <Foo msg="你好呀" />
   <p>
     Recommended IDE setup:
     <a
@@ -44,6 +63,12 @@ const count = ref(0);
     @click="count++"
   >
     count is: {{ count }}
+  </button>
+  <button
+    type="button"
+    @click="emit('testEmit')"
+  >
+    测试
   </button>
   <p>
     Edit
