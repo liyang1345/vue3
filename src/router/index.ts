@@ -12,6 +12,11 @@ const routes:RouteRecordRaw[] = [
     name: 'Login',
     component: () => import('../view/login/LoginIndex.vue'),
   },
+  {
+    path: '/he',
+    name: 'He',
+    component: () => import('../components/HelloWorld.vue'),
+  },
 ];
 const router = createRouter({
   history: createWebHashHistory(), // 路由模式
