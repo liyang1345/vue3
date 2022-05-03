@@ -7,6 +7,7 @@ import Foo from './foo';
 const props = defineProps({
   msg: {
     type: String,
+    default: 'tse',
   },
 });
 const count = ref(0);
