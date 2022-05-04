@@ -4,7 +4,6 @@ import User from '@/api/user';
 import TestComponent from './TestComponent.vue';
 
 console.log(User);
-
 const testComponentRef = ref < InstanceType <typeof TestComponent> |null>(null);
 onMounted(() => {
   console.log(testComponentRef.value?.msg);

@@ -41,4 +41,13 @@ module.exports = {
       typescript: {},
     },
   },
+  // 针对api模块去掉下划线变量名限制，兼容后端返回数据
+  overrides: [
+    {
+      files: ['src/api/**/*.ts'],
+      rules: {
+        camelcase: 'off',
+      },
+    },
+  ],
 };

@@ -14,7 +14,7 @@ onMounted(() => {
   };
   getotherUserInfo({ data })
     .then((res) => {
-      console.log(res.data.data.link);
+      console.log(res.data.data);
     });
 });
 </script>
