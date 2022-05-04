@@ -5,14 +5,16 @@
 
 <script setup lang="ts">
 // 使用vuex
-import { useStore } from '../../store';
+import { useStore } from '@/store';
 
 const store = useStore();
 
-console.log(store.state.count);
+console.log(store.state.foo);
 
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+div{
+  color:$red
+}
 </style>

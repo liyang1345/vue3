@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import User from '@/api/user';
 import TestComponent from './TestComponent.vue';
 
-const testComponentRef = ref < InstanceType <typeof TestComponent>|null>(null);
+console.log(User);
+
+const testComponentRef = ref < InstanceType <typeof TestComponent> |null>(null);
 onMounted(() => {
-  console.log(testComponentRef.value?.tnum);
+  console.log(testComponentRef.value?.msg);
 });
 </script>
 
